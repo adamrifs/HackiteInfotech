@@ -1,0 +1,53 @@
+.navbar-container {
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 80px;
+}
+
+.logo h2 {
+    /* font-family: 'Aexir'; */
+    /* font-family: "Orbitron", sans-serif; */
+    font-family: 'Nebula', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+
+.navlinks ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navlinks ul li {
+    list-style: none;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.navlinks ul li:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width:700px) {
+    .navbar-container {
+        padding: 10px 20px;
+    }
+
+    .navlinks ul {
+        gap: 10px;
+    }
+
+    .navlinks ul li {
+        font-size: 11px;
+    }
+
+    .navlinks ul a {
+        font-size: 11px;
+    }
+}
