@@ -3,7 +3,7 @@ import "../css/Story.css";
 import SpotlightCard from "../components/SpotlightCard";
 import ProfileCard from "../components/ProfileCard";
 import anoop from "../assets/avatar.jpg";
-import liviya from "../assets/avatar2.JPG";
+import liviya from "../assets/avatar2.jpg";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { motion } from "framer-motion";
