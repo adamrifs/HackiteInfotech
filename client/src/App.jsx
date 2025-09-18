@@ -3,14 +3,26 @@ import Home from "./pages/Home";
 import Services from "./pages/Service";
 import Blog from "./pages/Blog";
 import Navbar from "./components/Navbar";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import AdminPanel from "./pages/admin/AdminPanel";
+import Dashboard from "./components/Dashboard";
+import AddBlog from "./components/AddBlog";
 
 function App() {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" index element={<Home />} />
         <Route path="/service" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
+
+        <Route path="/admin" element={<AdminPanel />}>
+          <Route index element={<Dashboard />} />
+          <Route path="addblog" element={<AddBlog />} />
+        </Route>
       </Routes>
     </div>
   );
