@@ -83,7 +83,6 @@ const editBlog = async (req, res) => {
 const deleteBlog = async (req, res) => {
     try {
         const { id } = req.params
-
         const blog = await Blog.findById(id)
         if (!blog) {
             return res.status(404).json({ message: "Blog not found" });

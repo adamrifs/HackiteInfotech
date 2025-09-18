@@ -16,29 +16,35 @@ function App() {
   return (
     <div>
       <Routes>
+        {/* login/register always available */}
+        <Route
+          path="/login"
+          element={
+            token === "" ? (
+              <Login setToken={setToken} />
+            ) : (
+              <Navigate to="/admin" replace />
+            )
+          }
+        />
+        <Route path="/register" element={<Register />} />
+
+        {/* public pages */}
+        <Route path="/" element={<Home />} />
+        <Route path="/service" element={<Services />} />
+        <Route path="/blog" element={<Blog />} />
+
+        {/* protected admin pages */}
         {token === "" ? (
-          <>
-            <Route path="/login" element={<Login setToken={setToken} />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/service" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
-            {/* redirect any /admin routes to login if not logged in */}
-            <Route path="/admin/*" element={<Navigate to="/login" replace />} />
-          </>
+          <Route path="/admin/*" element={<Navigate to="/login" replace />} />
         ) : (
-          <>
-            <Route path="/admin" element={<AdminPanel token={token} />}>
-              <Route index element={<Dashboard />} />
-              <Route path="addblog" element={<AddBlog token={token} />} />
-            </Route>
-            {/* allow normal routes even after login */}
-            <Route path="/" element={<Home />} />
-            <Route path="/service" element={<Services />} />
-            <Route path="/blog" element={<Blog />} />
-          </>
+          <Route path="/admin" element={<AdminPanel token={token} />}>
+            <Route index element={<Dashboard />} />
+            <Route path="addblog" element={<AddBlog token={token} />} />
+          </Route>
         )}
       </Routes>
+
     </div>
   );
 }
