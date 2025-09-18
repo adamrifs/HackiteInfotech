@@ -51,28 +51,44 @@ const Story = () => {
                 </p>
               </motion.div>
             </div>
+
             <div className="story-card">
-              <SpotlightCard
-                className="custom-spotlight-card"
-                spotlightColor="rgba(0, 229, 255, 0.2)"
-              >
-                <h2>🎯 Our Mission</h2>
-                <p>
-                  To provide innovative and secure technology solutions that
-                  enable businesses to thrive in a digital-first world.
-                </p>
-              </SpotlightCard>
-              <SpotlightCard
-                className="custom-spotlight-card"
-                spotlightColor="rgba(0, 229, 255, 0.2)"
-              >
-                <h2>🌟 Our Vision</h2>
-                <p>
-                  To be recognized globally as a trusted leader in
-                  cybersecurity, software, and AI-driven digital transformation.
-                </p>
-              </SpotlightCard>
+              <motion.div
+                initial={{ opacity: 0, x: -80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                viewport={{ once: true, amount: 0.2 }}>
+                <SpotlightCard
+                  className="custom-spotlight-card"
+                  spotlightColor="rgba(0, 229, 255, 0.2)"
+                >
+                  <h2>🎯 Our Mission</h2>
+                  <p>
+                    To provide innovative and secure technology solutions that
+                    enable businesses to thrive in a digital-first world.
+                  </p>
+                </SpotlightCard>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}>
+                <SpotlightCard
+                  className="custom-spotlight-card"
+                  spotlightColor="rgba(0, 229, 255, 0.2)"
+                >
+                  <h2>🌟 Our Vision</h2>
+                  <p>
+                    To be recognized globally as a trusted leader in
+                    cybersecurity, software, and AI-driven digital transformation.
+                  </p>
+                </SpotlightCard>
+              </motion.div>
             </div>
+
+            {/* ========================= who we serve starts here ========================== */}
             <div className="who-we-serve">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -81,39 +97,67 @@ const Story = () => {
                 viewport={{ once: true }}>
                 <h1>Who We Serve</h1>
               </motion.div>
+
               <div className="who-we-serve-box">
-                <div className="wws-card">
+                <motion.div
+                  className="wws-card"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
                   <SpotlightCard
                     className="custom-spotlight-card"
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Businesses & Enterprises</h2>
                   </SpotlightCard>
-                </div>
-                <div className="wws-card">
+                </motion.div>
+
+                <motion.div
+                  className="wws-card"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
                   <SpotlightCard
                     className="custom-spotlight-card"
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Tech-Savvy Entrepreneurs</h2>
                   </SpotlightCard>
-                </div>
-                <div className="wws-card">
+                </motion.div>
+
+                <motion.div
+                  className="wws-card"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+                  viewport={{ once: true }}
+                >
                   <SpotlightCard
                     className="custom-spotlight-card"
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Educational & Training Seekers</h2>
                   </SpotlightCard>
-                </div>
-                <div className="wws-card">
+                </motion.div>
+
+                <motion.div
+                  className="wws-card"
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.9, ease: "easeOut",delay:0.8 }}
+                  viewport={{ once: true }}
+                >
                   <SpotlightCard
                     className="custom-spotlight-card"
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Global Clients</h2>
                   </SpotlightCard>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
