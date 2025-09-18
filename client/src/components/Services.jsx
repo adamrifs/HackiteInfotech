@@ -33,45 +33,67 @@ const items = [
     },
 ];
 
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.3, // delay between each item
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -80 },
+  show: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
+};
+
 const Services = () => {
-    return (
-        <div className="services-container bg-black text-white items-center justify-center !mb-[500px] sm:!mb-38">
-            <div className="services-heading text-center !mb-12 !px-10">
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true }}>
-                    <h1 className="text-4xl !mb-2">Our Services</h1>
-                </motion.div>
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: 'easeOut' }}
-                    viewport={{ once: true }}>
-                    <p className="text-gray-400 mt-2">
-                        Comprehensive technology solutions designed to secure, optimize, and
-                        transform your business
-                    </p>
-                </motion.div>
+  return (
+    <div className="services-container bg-black text-white items-center justify-center !mb-[50px] sm:!mb-38">
+      <div className="services-heading text-center !mb-12 !px-10">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <h1 className="text-4xl !mb-2">Our Services</h1>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          <p className="text-gray-400 mt-2">
+            Comprehensive technology solutions designed to secure, optimize, and
+            transform your business
+          </p>
+        </motion.div>
+      </div>
 
-            </div>
-
-            {/* Force 2x2 grid */}
-            <BentoGrid className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-1 gap-6">
-                {items.map((item, i) => (
-                    <BentoGridItem
-                        key={i}
-                        title={item.title}
-                        description={item.description}
-                        header={item.header}
-                        icon={item.icon}
-                        className="bg-black border border-gray-800 p-6 rounded-xl  transition"
-                    />
-                ))}
-            </BentoGrid>
-        </div>
-    );
+      <motion.div
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        {items.map((item, i) => (
+          <motion.div key={i} variants={itemVariants}>
+            <BentoGridItem
+              title={item.title}
+              description={item.description}
+              header={item.header}
+              icon={item.icon}
+              className="bg-black border border-gray-800 p-6 rounded-xl transition"
+            />
+          </motion.div>
+        ))}
+      </motion.div>
+    </div>
+  );
 };
 
 export default Services;
