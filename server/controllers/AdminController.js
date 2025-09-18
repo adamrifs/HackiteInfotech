@@ -4,8 +4,8 @@ const bcrypt = require('bcryptjs')
 
 const adminRegister = async (req, res) => {
     try {
-        const { name, email, password, role } = req.body
-        if (!name || !email || !password || !role) {
+        const { name, email, password,  } = req.body
+        if (!name || !email || !password ) {
             return res.status(500).json({ message: "all fields required" })
         }
         const adminExist = await Admin.findOne({ email })
