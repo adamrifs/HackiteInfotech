@@ -6,6 +6,18 @@ import { MdDelete } from "react-icons/md";
 const AddBlog = () => {
   const [blogModal, setBlogModal] = useState(false);
 
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [image, setImage] = useState(null)
+
+  const handleAddBlog = async () => {
+    try {
+
+    } catch (error) {
+      console.log(error)
+      alert(error)
+    }
+  }
   return (
     <div>
       <div className="bg-gray-800 w-full !px-4 !py-2 flex justify-between items-center">
@@ -52,6 +64,7 @@ const AddBlog = () => {
         </div>
       </div>
 
+      {/* ==================== adding a blog ======================== */}
       {blogModal && (
         <div className="bg-black/80 fixed inset-0 flex items-center justify-center">
           <div className="flex flex-col min-w-5xl bg-gray-800 rounded-2xl !p-5">
