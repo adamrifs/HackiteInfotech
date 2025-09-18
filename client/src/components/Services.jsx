@@ -58,7 +58,7 @@ const Services = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          <h1 className="text-4xl !mb-2">Our Services</h1>
+          <h1 className="text-4xl !mt-5 !mb-2">Our Services</h1>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
