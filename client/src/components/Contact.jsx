@@ -64,7 +64,7 @@ const Contact = () => {
               </p>
               <p>
                 <span className="font-semibold">Phone/WhatsApp:</span> +91
-                9072726001
+                
               </p>
             </div>
           </div>
