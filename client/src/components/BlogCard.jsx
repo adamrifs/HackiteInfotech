@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import cardData from '../lib/data.js'
+import { BlogContext } from '@/BlogContext.jsx'
 
 const BlogCard = () => {
   const [selectedCard, setSelectedCard] = useState(null)
+  const {blogs, fetchBlogs} = useContext(BlogContext)
 
   const handleOpen = (card) => {
     setSelectedCard(card)
@@ -18,11 +20,11 @@ const BlogCard = () => {
 
       {/* card container */}
       <div className="grid xl:grid-cols-3 md:grid-cols-1 md:w-[100%] grid-cols-1 justify-between gap-10 xl:gap-x-18 items-center ">
-        {cardData.map((item, index) => (
+        {blogs.map((item, index) => (
           <div
             className="md:w-[100%] md:h-[500px]"
             key={index}
-            
+
           >
             <div className="md:w-[100%] md:h-[300px] rounded-3xl overflow-hidden">
               <img
@@ -87,4 +89,4 @@ const BlogCard = () => {
   )
 }
 
-export default BlogCard
+export default BlogCard

@@ -5,9 +5,11 @@ const adminRoutes = require('./routes/AdminRoutes.js')
 const blogRoutes = require('./routes/BlogRoutes.js')
 const connectCloudinary = require('./config/Cloudinary.js')
 const cookieParser = require('cookie-parser')
+const dotenv = require('dotenv')
+dotenv.config()
 
 const app = express()
-const PORT = 5000
+const port = process.env.PORT
 
 
 app.use(express.json())
@@ -23,6 +25,6 @@ connectCloudinary()
 app.use('/api/admin', adminRoutes)
 app.use('/api/blog', blogRoutes)
 
-app.listen(PORT, () => {
-    console.log(`server running succesfull on port ${PORT}`)
+app.listen(port, () => {
+    console.log(`server running succesfull on port ${port}`)
 })
