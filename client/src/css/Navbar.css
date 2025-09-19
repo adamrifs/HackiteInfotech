@@ -36,11 +36,11 @@
 
 @media (max-width:700px) {
     .navbar-container {
-        padding: 10px 20px;
+        padding: 20px 20px;
     }
 
     .navlinks ul {
-        gap: 10px;
+        gap: 20px;
     }
 
     .navlinks ul li {
@@ -48,6 +48,6 @@
     }
 
     .navlinks ul a {
-        font-size: 11px;
+        font-size: 14px;
     }
 }
