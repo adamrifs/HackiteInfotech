@@ -56,7 +56,7 @@ const Contact = () => {
             <h2 className="text-2xl font-bold !mb-6">Get in touch</h2>
             <div className="!space-y-4">
               <p>
-                <span className="font-semibold">Email:</span> info@example.com
+                <span className="font-semibold">Email:</span> hackiteinfotech@gmail.com
               </p>
               <p>
                 <span className="font-semibold">Phone/WhatsApp:</span> +91
@@ -64,7 +64,7 @@ const Contact = () => {
               </p>
               <p>
                 <span className="font-semibold">Phone/WhatsApp:</span> +91
-                
+                7306354548
               </p>
             </div>
           </div>

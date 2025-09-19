@@ -4,6 +4,7 @@ import SpotlightCard from "../components/SpotlightCard";
 import ProfileCard from "../components/ProfileCard";
 import anoop from "../assets/avatar.jpg";
 import liviya from "../assets/avatar2.jpg";
+import sanin from '../assets/avatar3.jpg'
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { motion } from "framer-motion";
@@ -18,10 +19,16 @@ const Story = () => {
       src: liviya,
     },
     {
-      quote: "Leading AI & software innovation",
+      quote: "Specialist in digital marketing & brand growth",
       name: "Anoop KJ",
-      designation: "Director",
+      designation: "Digital Marketing Head",
       src: anoop,
+    },
+    {
+      quote: "Expert in technology strategy & product development",
+      name: "Sanin",
+      designation: "Company Technical Officer ( CTO )",
+      src: sanin,
     },
   ];
 
