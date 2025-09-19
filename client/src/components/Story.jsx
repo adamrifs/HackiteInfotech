@@ -13,13 +13,14 @@ const Story = () => {
     {
       quote: "Visionary leader driving innovation",
       name: "Liviya Thankachan",
+      email:"hackiteceo@gmail.com",
       designation: "Founder & CEO",
       src: liviya,
     },
     {
       quote: "Leading AI & software innovation",
       name: "Anoop KJ",
-      designation: "Head of Software & AI",
+      designation: "Director",
       src: anoop,
     },
   ];

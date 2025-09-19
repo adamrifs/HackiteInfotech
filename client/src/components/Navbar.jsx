@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="logo">
         <h2 onClick={goToHome} className="cursor-pointer">
-          <GradualSpacing text="Hackite" />
+          <GradualSpacing text="Hackite Infotech" />
         </h2>
       </div>
       <div className="navlinks">
