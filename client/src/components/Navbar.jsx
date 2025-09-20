@@ -43,7 +43,7 @@ const Navbar = () => {
           onClick={() => setOpen(!open)} className="menu-icon" />
         <ul ref={menuRef} className={open ? 'active' : ''}>
           <Link to="/">Home</Link>
-          <Link to="/service">Services</Link>
+          <Link to="/service">Servicess</Link>
           <Link to="/blog">Blog</Link>
           {/* <li>Contact Us</li> */}
         </ul>
