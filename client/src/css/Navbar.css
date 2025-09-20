@@ -62,7 +62,8 @@
         margin: 10px;
         position: absolute;
         top: 50px;
-        right: -250px;
+        right: 0px;
+        opacity: 0;
         transition: right 0.3s ease-in-out;
         padding: 10px;
         gap: 15px;
@@ -71,6 +72,7 @@
 
     .navlinks ul.active {
         right: 0;
+        opacity: 1;
     }
 
     .navlinks ul a {

@@ -203,7 +203,7 @@ const AddBlog = () => {
               </div>
             ))}
 
-            {/* ==================== adding a blog ======================== */}\
+            {/* ==================== adding a blog ======================== */}
             {
               isLoading ? (
                 <div className="grid xl:grid-cols-3 md:grid-cols-2 justify-center items-center gap-4 !pl-4 !pt-4">
