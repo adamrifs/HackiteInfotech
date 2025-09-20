@@ -34,13 +34,12 @@ const BlogHero = () => {
   ];
 
   return (
-    <div className="md:!p-10 md:!px-20 !p-5 !py-10">
-      <h1 className="md:text-5xl text-2xl md:!pt-20 !pt-10">Top Blogs</h1>
-
-      <div className="flex items-start gap-3 !py-8 relative overflow-x-auto md:overflow-x-hidden">
+    <div className="md:!p-0 md:!px-20 !p-5 !py-0 overflow-x-hidden">
+      <h1 className="md:text-4xl text-2xl md:!pt-20 !pt-14">Top Blogs</h1>
+      <div className="flex items-start gap-3 !py-4 relative overflow-x-auto md:overflow-x-hidden">
         {/* First big blog */}
         <div
-          className="min-w-[400px] md:min-w-[650px] cursor-pointer"
+          className="min-w-[300px] md:min-w-[650px] cursor-pointer"
           onClick={() => setSelectedBlog(blogs[0])}
         >
           <div className="w-[100%]">
@@ -52,7 +51,7 @@ const BlogHero = () => {
           </div>
           <p className="!py-4 text-sm">{blogs[0].date}</p>
           <h3 className="text-2xl font-semibold !pb-4">{blogs[0].title}</h3>
-          <p className="!text-[#ddd] w-[400px] md:w-[600px]">
+          <p className="!text-[#ddd] w-[300px] md:w-[600px]">
             {blogs[0].description}
           </p>
         </div>
@@ -62,20 +61,20 @@ const BlogHero = () => {
           {blogs.slice(1).map((blog) => (
             <div
               key={blog.id}
-              className="flex flex-col md:flex-row md:min-w-[400px] min-w-[400px] gap-2 cursor-pointer"
+              className="flex flex-col md:flex-row gap-2 cursor-pointer"
               onClick={() => setSelectedBlog(blog)}
             >
               <div>
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="object-cover rounded-3xl h-[260px] md:h-[300px] w-[400px]"
+                  className="object-cover rounded-3xl h-[260px] md:h-[270px] w-[300px]"
                 />
               </div>
               <div>
                 <p className="!pb-4 text-sm">{blog.date}</p>
                 <h3 className="text-2xl font-semibold !pb-4">{blog.title}</h3>
-                <p className="w-[400px] md:w-[300px] text-sm !text-[#ddd]">
+                <p className="w-[300px] md:w-[300px] text-sm !text-[#ddd]">
                   {blog.description}
                 </p>
               </div>
