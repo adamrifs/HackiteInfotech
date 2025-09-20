@@ -9,12 +9,11 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 
 const AddBlog = () => {
-  const { blogs, fetchBlogs ,blogCount } = useContext(BlogContext)
+  const { blogs, fetchBlogs, blogCount } = useContext(BlogContext)
   const [isLoading, setIsLoading] = useState(false)
   const [blogModal, setBlogModal] = useState(false);
   const [editBlog, setEditBlog] = useState(false);
   const [blogsId, setBlogsId] = useState(null);
-  // const [blogs, setBlogs] = useState([]);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState(null);
@@ -45,7 +44,7 @@ const AddBlog = () => {
       formdata.append("image", image);
       formdata.append("title", title);
       formdata.append("description", description);
-
+      setIsLoading(true)
       const response = await axios.post(
         "http://localhost:5000/api/blog/addBlog",
         formdata,
@@ -66,6 +65,8 @@ const AddBlog = () => {
     } catch (error) {
       console.log(error);
       alert(error);
+    } finally {
+      setIsLoading(false)
     }
   };
 
@@ -202,51 +203,79 @@ const AddBlog = () => {
               </div>
             ))}
 
-            {/* ==================== adding a blog ======================== */}
-            {blogModal && (
-              <div className="bg-black/80 fixed inset-0 flex items-center justify-center">
-                <div className="flex flex-col min-w-5xl bg-gray-800 rounded-2xl !p-5">
-                  <h1 className="font-semibold text-2xl text-center !mb-8">
-                    Add a Blog
-                  </h1>
-                  <label className="!mb-1">Image</label>
-                  <input
-                    type="file"
-                    onChange={(e) => setImage(e.target.files[0])}
-                    className="w-full !p-2 !mb-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2"
-                  />
-                  <label className="!mb-1">Title</label>
-                  <input
-                    placeholder="Blog Title"
-                    type="text"
-                    value={title}
-                    onChange={(e) => setTitle(e.target.value)}
-                    className="w-full !p-2 !mb-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2"
-                  />
-                  <label className="!mb-1">description</label>
-                  <textarea
-                    placeholder="Blog Description"
-                    value={description}
-                    onChange={(e) => setDescription(e.target.value)}
-                    className="w-full !p-2 !mb-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2"
-                  ></textarea>
-                  <div className="flex justify-end gap-3">
-                    <button
-                      onClick={() => setBlogModal(false)}
-                      className="bg-gray-600 hover:bg-gray-500 !px-4 !py-2 rounded"
+            {/* ==================== adding a blog ======================== */}\
+            {
+              isLoading ? (
+                <div className="grid xl:grid-cols-3 md:grid-cols-2 justify-center items-center gap-4 !pl-4 !pt-4">
+                  {[...Array(blogCount)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="bg-gray-900 rounded-2xl overflow-hidden shadow-md max-w-sm animate-pulse"
                     >
-                      Cancel
-                    </button>
-                    <button
-                      onClick={handleAddBlog}
-                      className="bg-blue-600 hover:bg-blue-500 !px-4 !py-2 rounded"
-                    >
-                      Save
-                    </button>
-                  </div>
+                      {/* Image Skeleton */}
+                      <div className="w-full h-56 bg-gray-700"></div>
+
+                      <div className="!p-4 !space-y-3">
+                        {/* Title Skeleton */}
+                        <div className="h-5 bg-gray-700 rounded w-3/4"></div>
+
+                        {/* Content Skeleton */}
+                        <div className="h-4 bg-gray-700 rounded w-full"></div>
+                        <div className="h-4 bg-gray-700 rounded w-5/6"></div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              </div>
-            )}
+              ) : (
+                <div>
+                  {blogModal && (
+                    <div className="bg-black/80 fixed inset-0 flex items-center justify-center">
+                      <div className="flex flex-col min-w-5xl bg-gray-800 rounded-2xl !p-5">
+                        <h1 className="font-semibold text-2xl text-center !mb-8">
+                          Add a Blog
+                        </h1>
+                        <label className="!mb-1">Image</label>
+                        <input
+                          type="file"
+                          onChange={(e) => setImage(e.target.files[0])}
+                          className="w-full !p-2 !mb-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2"
+                        />
+                        <label className="!mb-1">Title</label>
+                        <input
+                          placeholder="Blog Title"
+                          type="text"
+                          value={title}
+                          onChange={(e) => setTitle(e.target.value)}
+                          className="w-full !p-2 !mb-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2"
+                        />
+                        <label className="!mb-1">description</label>
+                        <textarea
+                          placeholder="Blog Description"
+                          value={description}
+                          onChange={(e) => setDescription(e.target.value)}
+                          className="w-full !p-2 !mb-3 rounded-md border border-gray-700 focus:outline-none focus:ring-2"
+                        ></textarea>
+                        <div className="flex justify-end gap-3">
+                          <button
+                            onClick={() => setBlogModal(false)}
+                            className="bg-gray-600 hover:bg-gray-500 !px-4 !py-2 rounded"
+                          >
+                            Cancel
+                          </button>
+                          <button
+                            onClick={handleAddBlog}
+                            className="bg-blue-600 hover:bg-blue-500 !px-4 !py-2 rounded"
+                          >
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )
+            }
+
 
             {/* ======================================= edit blog =================================  */}
             {editBlog && (
