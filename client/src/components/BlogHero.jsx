@@ -6,7 +6,7 @@ const BlogHero = () => {
   const blogs = [
     {
       id: 1,
-      title: "Tech marvels for your Home",
+      title: "Tech marvels",
       date: "27/06/2002",
       description:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, nam odit provident quasi, accusantium accusamus ab a odio, laboriosam suscipit ipsam cumque laudantium pariatur asperiores maxime deleniti quae architecto? Amet.",
@@ -51,7 +51,7 @@ const BlogHero = () => {
           </div>
           <p className="!py-4 text-sm">{blogs[0].date}</p>
           <h3 className="text-2xl font-semibold !pb-4">{blogs[0].title}</h3>
-          <p className="!text-[#ddd] w-[300px] md:w-[600px]">
+          <p className="!text-[#ddd] w-[300px] md:w-[600px] line-clamp-3 md:line-clamp-0">
             {blogs[0].description}
           </p>
         </div>
@@ -68,13 +68,13 @@ const BlogHero = () => {
                 <img
                   src={blog.image}
                   alt={blog.title}
-                  className="object-cover rounded-3xl h-[260px] md:h-[270px] w-[300px]"
+                  className="object-cover rounded-3xl h-[260px] md:h-[270px] w-[300px] md:w-[400px]"
                 />
               </div>
               <div>
                 <p className="!pb-4 text-sm">{blog.date}</p>
                 <h3 className="text-2xl font-semibold !pb-4">{blog.title}</h3>
-                <p className="w-[300px] md:w-[300px] text-sm !text-[#ddd]">
+                <p className="w-[300px] md:w-[300px] text-sm !text-[#ddd] line-clamp-3 md:line-clamp-0">
                   {blog.description}
                 </p>
               </div>
@@ -85,8 +85,8 @@ const BlogHero = () => {
 
       {/* Popup Modal */}
       {selectedBlog && (
-        <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
-          <div className="bg-gray-950 dark:bg-neutral-900 rounded-2xl max-w-2xl w-full !p-6 relative">
+        <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50 ">
+          <div className="bg-gray-950 dark:bg-neutral-900 rounded-2xl md:max-w-2xl w-[300px] md:w-full !p-6 relative">
             {/* Close Button */}
             <button
               onClick={() => setSelectedBlog(null)}
