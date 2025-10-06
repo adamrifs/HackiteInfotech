@@ -38,15 +38,15 @@ const Navbar = () => {
         </h2>
       </div>
       <div className="navlinks">
-        {/* <HiMenuAlt4
+        <HiMenuAlt4
           ref={iconRef}
-          onClick={() => setOpen(!open)} className="menu-icon" /> */}
+          onClick={() => setOpen(!open)} className="menu-icon" />
         <ul ref={menuRef} className={open ? 'active' : ''}>
-          {/* <Link to="/">Home</Link> */}
-          {/* <Link to="/service">Servicess</Link> */}
-          {/* <Link to="/blog">Blog</Link> */}
-          {/* <li>Contact Us</li> */}
-        </ul>
+          <Link to="/">Home</Link>
+          <Link to="/service">Services</Link>
+          <Link to="/blog">Blog</Link>
+          <li>Contact Us</li>
+        </ul> 
       </div>
     </div>
   );
