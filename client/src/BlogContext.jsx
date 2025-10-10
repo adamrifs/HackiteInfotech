@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import serverUrl from '../urls.js'
 
 export const BlogContext = createContext()
 
@@ -10,9 +10,7 @@ export const BlogProvider = ({ children }) => {
     const [blogCount, setBlogCount] = useState(0)
     const fetchBlogs = async () => {
         try {
-            const response = await axios.get(
-                "http://localhost:5000/api/blog/getBlog"
-            );
+            const response = await axios.get(`${serverUrl}/api/blog/getBlog`);
             setBlogs(response.data);
             setBlogCount(response.data.length)
             console.log("Fetched blogs:", response.data);
