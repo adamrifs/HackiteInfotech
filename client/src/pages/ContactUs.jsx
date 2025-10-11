@@ -1,9 +1,36 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion } from "framer-motion";
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import emailjs from "@emailjs/browser";
+
 const ContactUs = () => {
+    const form = useRef()
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_kvk7bll",
+            "template_3b9moyw",
+            form.current,
+            "M7-Ac5xoghwlWudW3"
+        ).then(
+            (result) => {
+                console.log(result.text);
+                alert("Message sent successfully!");
+                e.target.reset(); // clear form after sending
+            },
+            (error) => {
+                console.log(error.text);
+                alert("Failed to send message. Please try again.");
+            }
+        );
+
+    }
+
     return (
+
         <>
             <Navbar />
             <section className="!py-12 !px-6 flex flex-col !justify-center !items-center !mb-10 md:!mb-20">
@@ -19,7 +46,7 @@ const ContactUs = () => {
                 <div className="!max-w-6xl !mx-auto !grid md:!grid-cols-2 !gap-10 !justify-center">
                     <div className=" !p-8 rounded-2xl shadow-lg">
                         <h2 className="text-2xl font-bold !mb-6">Send us a message</h2>
-                        <form className="!space-y-8">
+                        <form className="!space-y-8" ref={form} onSubmit={sendEmail}>
                             <div>
                                 <label className="block text-sm font-medium !mb-2">Name *</label>
                                 <input
@@ -66,10 +93,7 @@ const ContactUs = () => {
                                     <span className="font-semibold">Phone/WhatsApp:</span> +91
                                     8129895005
                                 </p>
-                                <p>
-                                    <span className="font-semibold">Phone/WhatsApp:</span> +91
-                                    7306354548
-                                </p>
+
                             </div>
                         </div>
 
