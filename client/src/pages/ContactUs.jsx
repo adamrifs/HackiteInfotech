@@ -52,6 +52,7 @@ const ContactUs = () => {
                                 <input
                                     type="text"
                                     placeholder="Your Name"
+                                      name="user_name"
                                     className="w-full md:w-[400px] !px-4 !py-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-gray-500 outline-none"
                                 />
                             </div>
@@ -59,6 +60,7 @@ const ContactUs = () => {
                                 <label className="block text-sm font-medium !mb-2">Email *</label>
                                 <input
                                     type="email"
+                                    name="user_email"
                                     placeholder="Your Email"
                                     className="w-full !px-4 !py-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-gray-500 outline-none"
                                 />
@@ -69,6 +71,7 @@ const ContactUs = () => {
                                 </label>
                                 <textarea
                                     rows="4"
+                                    name="message"
                                     placeholder="Your Message"
                                     className="w-full !px-4 !py-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-gray-500 outline-none"
                                 ></textarea>
