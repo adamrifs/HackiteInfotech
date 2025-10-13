@@ -23,6 +23,7 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.12",
     "js-cookie": "^3.0.5",
+    "lightswind": "^3.1.18",
     "lucide-react": "^0.544.0",
     "motion": "^12.23.12",
     "ogl": "^1.0.11",

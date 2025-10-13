@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        import React, { useState } from "react";
+import React, { useState } from "react";
 import { useRef } from "react";
 import "../css/Home.css";
 import Navbar from "../components/Navbar";
@@ -11,9 +11,31 @@ import avatar from "../assets/avatar.jpg";
 import Contact from "@/components/Contact";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import InteractiveGridBackground from "@/components/ui/interactive-grid-background";
+import SmokeyCursor from "@/components/ui/smokey-cursor"
+
 const Home = () => {
     return (
         <>
+            <SmokeyCursor
+                splatRadius={0.1}
+                splatForce={3000}
+                densityDissipation={8}
+                velocityDissipation={5}
+                colorUpdateSpeed={5}
+            />
+            {/* <InteractiveGridBackground
+                gridSize={40}
+                gridColor="#d1d5db"
+                darkGridColor="#1f2937"
+                effectColor="rgba(0,255,255,0.5)"
+                darkEffectColor="rgba(255,0,255,0.5)"
+                trailLength={5}
+                glow
+                glowRadius={30}
+                showFade={false}
+                fadeIntensity={25}
+                className="!fixed z-[-10]" /> */}
             <div className="home-container">
                 <Navbar />
                 <Aurora
@@ -26,7 +48,7 @@ const Home = () => {
                 <div className="heading">
                     <ShinyText
                         text="Innovating the Future,
-                    Securing the Present"
+                        Securing the Present"
                         disabled={false}
                         speed={3}
                         className="heading-h1"
@@ -37,9 +59,9 @@ const Home = () => {
                         <br /> and AI solutions to help businesses thrive securely in the
                         digital-first era.
                     </p>
-                    <button className="glow-btn">
+                    {/* <button className="glow-btn">
                         <span>SEE IN ACTION →</span>
-                    </button>
+                    </button> */}
                 </div>
             </div>
             <div className="flex items-center justify-center !mb-[500px] sm:!mb-38 ">
@@ -91,6 +113,7 @@ const Home = () => {
             <div>
                 <Footer />
             </div>
+
         </>
     );
 };
