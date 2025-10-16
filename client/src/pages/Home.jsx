@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
 import InteractiveGridBackground from "@/components/ui/interactive-grid-background";
 import SmokeyCursor from "@/components/ui/smokey-cursor"
+import WhyUs from "@/components/WhyUs";
 
 const Home = () => {
     return (
@@ -53,18 +54,22 @@ const Home = () => {
                         speed={3}
                         className="heading-h1"
                     />
-                    <p>
+                    {/* <p>
                         Hackite Infotech delivers cutting-edge cybersecurity, IT consulting,
                         software,
                         <br /> and AI solutions to help businesses thrive securely in the
                         digital-first era.
-                    </p>
+                    </p> */}
+                    <p>We Craft Cybersecurity, IT, Software, and AI solutions that power growth and protect your digital future.</p>
                     {/* <button className="glow-btn">
                         <span>SEE IN ACTION →</span>
                     </button> */}
                 </div>
             </div>
-            <div className="flex items-center justify-center !mb-[500px] sm:!mb-38 ">
+            <div>
+                <WhyUs/>
+            </div>
+            <div className="flex items-center justify-center !mb-[500px] sm:!mb-38">
                 <Services />
             </div>
             <div>

@@ -17,18 +17,18 @@ const items = [
         icon: <IconTableColumn className="h-4 w-4 text-gray-300" />,
     },
     {
-        title: "Scalable IT & Cloud Solutions",
-        description: "From network optimization to AWS, Azure, and GCP cloud migration, we build reliable IT infrastructures that grow with your business.",
+        title: "Digital Marketing",
+        description: "We help brands grow and engage their audience through data-driven strategies, SEO, social media marketing, and performance campaigns that deliver measurable results.",
         icon: <IconArrowWaveRightUp className="h-4 w-4 text-gray-300" />,
     },
     {
-        title: "Smart Software & AI Innovation",
-        description: "We develop custom apps, SaaS platforms, and AI-powered automation to drive efficiency, insights, and digital transformation.",
+        title: "Web Application development",
+        description: "We build scalable, secure, and high-performance web applications tailored to your business needs, delivering seamless user experiences and robust functionality across devices.",
         icon: <IconBoxAlignTopLeft className="h-4 w-4 text-gray-300" />,
     },
     {
-        title: "Training & Workforce Empowerment",
-        description: "Through bootcamps, ethical hacking workshops, and internship programs, we equip individuals and teams with real-world tech skills",
+        title: "Mobile App Development",
+        description: "We design and develop intuitive, high-performance mobile apps for iOS and Android that engage users, drive growth, and deliver seamless digital experiences.",
         icon: <IconBoxAlignRightFilled className="h-4 w-4 text-gray-300" />,
     },
 ];
@@ -74,20 +74,20 @@ const Services = () => {
       </div>
 
       <motion.div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+        className="max-w-7xl !mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
       >
         {items.map((item, i) => (
-          <motion.div key={i} variants={itemVariants}>
+          <motion.div key={i} variants={itemVariants} className="">
             <BentoGridItem
               title={item.title}
               description={item.description}
               header={item.header}
               icon={item.icon}
-              className="bg-black border border-gray-800 p-6 rounded-xl transition"
+              className="bg-black border border-gray-800 p-6 rounded-xl !mx-5 hover:cursor-pointer"
             />
           </motion.div>
         ))}

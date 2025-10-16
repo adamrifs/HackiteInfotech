@@ -10,6 +10,7 @@ import AddBlog from "./components/AddBlog";
 import { useState } from "react";
 import Cookies from "js-cookie";
 import ContactUs from "./pages/ContactUs";
+import CybersecurityPage from "./pages/user/CybersecurityPage";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("jwt") || "");
@@ -35,6 +36,7 @@ function App() {
         <Route path="/service" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/cyber-security" element={<CybersecurityPage />} />
 
         {/* protected admin pages */}
         {token === "" ? (
