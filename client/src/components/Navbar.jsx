@@ -29,11 +29,12 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-
+  const [openMobile, setOpenMobile] = useState(false)
+  console.log(openMobile)
   return (
     <div className="navbar-container">
       <div className="logo">
-        <h2 onClick={goToHome} className="cursor-pointer">
+        <h2 onClick={goToHome} className="cursor-pointer ">
           <GradualSpacing text="Hackite Infotech" />
         </h2>
       </div>
@@ -42,11 +43,32 @@ const Navbar = () => {
           ref={iconRef}
           onClick={() => setOpen(!open)} className="menu-icon" />
         <ul ref={menuRef} className={open ? 'active' : ''}>
-          <Link to="/">Home</Link>   
-          <Link to="/service">Services</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/contactus">Contact Us</Link>
-        </ul> 
+          <Link to="/" className="block h-[50px]" >Home</Link>
+
+          {/* ================= services ================= */}
+          <li className="dropdown">Services
+            <div className="dropdown-content">
+              <Link to="/service1">Service 1</Link>
+              <Link to="/service2">Service 2</Link>
+              <Link to="/service3">Service 3</Link>
+            </div>
+          </li>
+
+          <li className="dropdown">Contact Us
+            <div className="dropdown-content">
+              <Link to="/service1">Service 1</Link>
+              <Link to="/service2">Service 2</Link>
+              <Link to="/service3">Service 3</Link>
+            </div>
+          </li>
+          <li className="dropdown">Blog
+            <div className="dropdown-content">
+              <Link to="/service1">Service 1</Link>
+              <Link to="/service2">Service 2</Link>
+              <Link to="/service3">Service 3</Link>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   );
