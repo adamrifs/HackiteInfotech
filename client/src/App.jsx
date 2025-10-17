@@ -11,6 +11,9 @@ import { useState } from "react";
 import Cookies from "js-cookie";
 import ContactUs from "./pages/ContactUs";
 import CybersecurityPage from "./pages/user/CybersecurityPage";
+import DigitalMarketingPage from "./pages/user/DigitalMarketingPage";
+import WebApplicationPage from "./pages/user/WebApplicationPage";
+import MobileAppPage from "./pages/user/MobileAppPage";
 
 function App() {
   const [token, setToken] = useState(Cookies.get("jwt") || "");
@@ -37,6 +40,9 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/cyber-security" element={<CybersecurityPage />} />
+        <Route path="/digital-marketing" element={<DigitalMarketingPage />} />
+        <Route path="/web-app" element={<WebApplicationPage />} />
+        <Route path="/mobile-app" element={<MobileAppPage />} />
 
         {/* protected admin pages */}
         {token === "" ? (

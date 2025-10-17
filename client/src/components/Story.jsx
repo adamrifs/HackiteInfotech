@@ -4,7 +4,7 @@ import SpotlightCard from "../components/SpotlightCard";
 import ProfileCard from "../components/ProfileCard";
 import anoop from "../assets/avatar.jpg";
 import liviya from "../assets/avatar2.jpg";
-import sanin from '../assets/avatar3.jpg'
+import sanin from "../assets/avatar3.jpg";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { motion } from "framer-motion";
@@ -12,20 +12,20 @@ import { motion } from "framer-motion";
 const Story = () => {
   const testimonials = [
     {
-      quote: "Visionary leader driving innovation",
+      quote: "Liviya Thankachan is the Founder & CEO (and Director) of HACKITE INFOTECH Pvt Ltd, a premier IT company specializing in hands-on cybersecurity training, ethical hacking services, and secure mobile application development. An accomplished researcher and ethical hacker, Liviya is deeply committed to strengthening digital security. She brings deep expertise in cyber threat analysis, penetration testing, and secure coding, informed by her extensive background at leading technology firms. Under her leadership, HACKITE INFOTECH empowers both individuals and organizations to effectively tackle modern digital threats. The company bridges the skills gap with immersive learning and a focus on robust, real-world defensive and offensive techniques. Her vision is to cultivate the next generation of cybersecurity professionals and foster innovation and resilience across the entire digital landscape",
       name: "Liviya Thankachan",
-      email:"hackiteceo@gmail.com",
+      // email: "hackiteceo@gmail.com",
       designation: "Founder & CEO",
       src: liviya,
     },
     {
-      quote: "Specialist in digital marketing & brand growth",
+      quote: "Liviya Thankachan is the Founder & CEO (and Director) of HACKITE INFOTECH Pvt Ltd, a premier IT company specializing in hands-on cybersecurity training, ethical hacking services, and secure mobile application development. An accomplished researcher and ethical hacker, Liviya is deeply committed to strengthening digital security. She brings deep expertise in cyber threat analysis, penetration testing, and secure coding, informed by her extensive background at leading technology firms. Under her leadership, HACKITE INFOTECH empowers both individuals and organizations to effectively tackle modern digital threats. The company bridges the skills gap with immersive learning and a focus on robust, real-world defensive and offensive techniques. Her vision is to cultivate the next generation of cybersecurity professionals and foster innovation and resilience across the entire digital landscape",
       name: "Anoop KJ",
       designation: "Digital Marketing Head",
       src: anoop,
     },
     {
-      quote: "Expert in technology strategy & product development",
+      quote: "Liviya Thankachan is the Founder & CEO (and Director) of HACKITE INFOTECH Pvt Ltd, a premier IT company specializing in hands-on cybersecurity training, ethical hacking services, and secure mobile application development. An accomplished researcher and ethical hacker, Liviya is deeply committed to strengthening digital security. She brings deep expertise in cyber threat analysis, penetration testing, and secure coding, informed by her extensive background at leading technology firms. Under her leadership, HACKITE INFOTECH empowers both individuals and organizations to effectively tackle modern digital threats. The company bridges the skills gap with immersive learning and a focus on robust, real-world defensive and offensive techniques. Her vision is to cultivate the next generation of cybersecurity professionals and foster innovation and resilience across the entire digital landscape",
       name: "Sanin",
       designation: "Company Technical Officer ( CTO )",
       src: sanin,
@@ -35,74 +35,15 @@ const Story = () => {
   return (
     <>
       <div className="story-container sm:!mb-20 !mb-90">
-        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
           <div className="story-box">
-            <div className="story-heading !px-4 text-center">
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                viewport={{ once: true }}>
-                <h1>The Journey So Far.</h1>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                viewport={{ once: true }}>
-                <p>
-                  Hackite Infotech was founded with a simple belief: technology
-                  should empower, not endanger. In today's rapidly evolving
-                  digital landscape, businesses face unprecedented challenges in
-                  securing their data, optimizing their operations, and staying
-                  competitive.
-                </p>
-              </motion.div>
-            </div>
-
-            <div className="story-card">
-              <motion.div
-                initial={{ opacity: 0, x: -80 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                viewport={{ once: true, amount: 0.2 }}>
-                <SpotlightCard
-                  className="custom-spotlight-card"
-                  spotlightColor="rgba(0, 229, 255, 0.2)"
-                >
-                  <h2>🎯 Our Mission</h2>
-                  <p>
-                    To provide innovative and secure technology solutions that
-                    enable businesses to thrive in a digital-first world.
-                  </p>
-                </SpotlightCard>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 80 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                viewport={{ once: true, amount: 0.2 }}>
-                <SpotlightCard
-                  className="custom-spotlight-card"
-                  spotlightColor="rgba(0, 229, 255, 0.2)"
-                >
-                  <h2>🌟 Our Vision</h2>
-                  <p>
-                    To be recognized globally as a trusted leader in
-                    cybersecurity, software, and AI-driven digital transformation.
-                  </p>
-                </SpotlightCard>
-              </motion.div>
-            </div>
-
             {/* ========================= who we serve starts here ========================== */}
             <div className="who-we-serve">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-                viewport={{ once: true }}>
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+              >
                 <h1>Who We Serve</h1>
               </motion.div>
 
@@ -156,7 +97,7 @@ const Story = () => {
                   className="wws-card"
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.9, ease: "easeOut",delay:0.8 }}
+                  transition={{ duration: 0.9, ease: "easeOut", delay: 0.8 }}
                   viewport={{ once: true }}
                 >
                   <SpotlightCard
@@ -169,7 +110,6 @@ const Story = () => {
               </div>
             </div>
           </div>
-        </BackgroundLines>
       </div>
 
       <div className="flex flex-col items-center justify-center">
@@ -177,8 +117,9 @@ const Story = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true }}>
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <h1 className="text-4xl md:text-6xl">Our Team</h1>
           </motion.div>
         </div>
