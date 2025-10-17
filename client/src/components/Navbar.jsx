@@ -3,6 +3,7 @@ import "../css/Navbar.css";
 import { GradualSpacing } from "./Gradual-spacing";
 import { Link, useNavigate } from "react-router-dom";
 import { HiMenuAlt4 } from "react-icons/hi";
+import logo from '../assets/logo-2.png'
 
 const Navbar = () => {
   const nav = useNavigate()
@@ -35,8 +36,9 @@ const Navbar = () => {
     <div className="navbar-container">
       <div className="logo">
         <h2 onClick={goToHome} className="cursor-pointer ">
-          <GradualSpacing text="Hackite Infotech" />
+          {/* <GradualSpacing text="Hackite Infotech" /> */}
         </h2>
+        <img src={logo} alt="logo" />
       </div>
       <div className="navlinks">
         <HiMenuAlt4
@@ -48,7 +50,7 @@ const Navbar = () => {
           {/* ================= services ================= */}
           <li className="dropdown">Services
             <div className="dropdown-content">
-              <Link to="/service1">Service 1</Link>
+              <Link to="/cyber-security">Cyber Security</Link>
               <Link to="/service2">Service 2</Link>
               <Link to="/service3">Service 3</Link>
             </div>
