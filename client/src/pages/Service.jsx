@@ -6,7 +6,7 @@ const Service = () => {
   return (
     <div className='relative'>
       <Navbar />
-      <div className='flex items-center justify-center !mb-[500px] sm:!mb-38'>
+      <div className='flex items-center justify-center !mb-[150px] sm:!mb-38'>
         <Services />
       </div>
     </div>

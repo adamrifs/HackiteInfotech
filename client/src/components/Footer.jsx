@@ -20,11 +20,11 @@ const Footer = () => {
       <div className="flex flex-col items-start md:items-end justify-end text-center md:text-right !pb-12">
         <p className='!text-gray-400 text-4xl !mb-1'><IoLocationSharp /></p>
         <p className='text-lg !text-gray-300 '>Hackite Infotech Pvt Ltd</p>
-        <p className='text-xs !text-gray-300 '>Door No. 52/1067/52, Dew Space, 4th Floor,<br/>Chowallur Tower, Thrissur, 680004, Kerala</p>
+        <p className='text-xs !text-gray-300 md:w-auto w-[200px] text-left '>Door No. 52/1067/52, Dew Space, 4th Floor,<br/>Chowallur Tower, Thrissur, 680004, Kerala</p>
         <p className="text-xs md:text-sm !text-gray-400 !mt-2">
           Innovating the Future, Securing the Present
         </p>
-        <p className="text-xs md:text-sm absolute bottom-1 left-[50%] -translate-x-1/2 w-full md:w-auto">
+        <p className="text-xs md:text-sm absolute bottom-[-25px] md:bottom-2 left-[50%] -translate-x-1/2 w-full md:w-auto">
           © 2025 Hackite Infotech. All Rights Reserved.
         </p>
       </div>

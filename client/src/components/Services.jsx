@@ -50,7 +50,7 @@ const itemVariants = {
 
 const Services = () => {
   return (
-    <div className="services-container bg-black text-white items-center justify-center !mb-[50px] sm:!mb-38">
+    <div className="services-container bg-black text-white items-center justify-center mb-[50px] sm:mb-38">
       <div className="services-heading text-center !mb-12 !px-10">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
