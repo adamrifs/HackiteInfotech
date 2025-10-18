@@ -34,7 +34,7 @@ const Story = () => {
 
   return (
     <>
-      <div className="story-container sm:!mb-20 !mb-90">
+      <div className="story-container sm:!mb-20 !mb-20">
           <div className="story-box">
             {/* ========================= who we serve starts here ========================== */}
             <div className="who-we-serve">
