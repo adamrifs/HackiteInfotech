@@ -19,13 +19,13 @@ const Story = () => {
       src: liviya,
     },
     {
-      quote: "Liviya Thankachan is the Founder & CEO (and Director) of HACKITE INFOTECH Pvt Ltd, a premier IT company specializing in hands-on cybersecurity training, ethical hacking services, and secure mobile application development. An accomplished researcher and ethical hacker, Liviya is deeply committed to strengthening digital security. She brings deep expertise in cyber threat analysis, penetration testing, and secure coding, informed by her extensive background at leading technology firms. Under her leadership, HACKITE INFOTECH empowers both individuals and organizations to effectively tackle modern digital threats. The company bridges the skills gap with immersive learning and a focus on robust, real-world defensive and offensive techniques. Her vision is to cultivate the next generation of cybersecurity professionals and foster innovation and resilience across the entire digital landscape",
+      quote: "Specialist in digital marketing & brand growth                                                                   ",
       name: "Anoop KJ",
       designation: "Digital Marketing Head",
       src: anoop,
     },
     {
-      quote: "Liviya Thankachan is the Founder & CEO (and Director) of HACKITE INFOTECH Pvt Ltd, a premier IT company specializing in hands-on cybersecurity training, ethical hacking services, and secure mobile application development. An accomplished researcher and ethical hacker, Liviya is deeply committed to strengthening digital security. She brings deep expertise in cyber threat analysis, penetration testing, and secure coding, informed by her extensive background at leading technology firms. Under her leadership, HACKITE INFOTECH empowers both individuals and organizations to effectively tackle modern digital threats. The company bridges the skills gap with immersive learning and a focus on robust, real-world defensive and offensive techniques. Her vision is to cultivate the next generation of cybersecurity professionals and foster innovation and resilience across the entire digital landscape",
+      quote: "Expert in technology strategy & product development                                                              ",
       name: "Sanin",
       designation: "Company Technical Officer ( CTO )",
       src: sanin,

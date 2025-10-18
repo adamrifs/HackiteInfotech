@@ -13,7 +13,7 @@ const items = [
     {
         title: "End-to-End Cybersecurity",
         description:
-            "We safeguard businesses from evolving digital threats with VAPT, red teaming, and threat analysis—ensuring your systems stay resilient.",
+            "We safeguard businesses from evolving digital threats with comprehensive VAPT, red teaming exercises, and advanced threat analysis—ensuring your systems remain secure and resilient.",
         icon: <IconTableColumn className="h-4 w-4 text-gray-300" />,
     },
     {
@@ -87,7 +87,8 @@ const Services = () => {
               description={item.description}
               header={item.header}
               icon={item.icon}
-              className="bg-black border border-gray-800 p-6 rounded-xl !mx-5 hover:cursor-pointer"
+              showKnowMore={true}
+              className="bg-black border border-gray-800 !p-6 rounded-xl !mx-5 hover:cursor-pointer"
             />
           </motion.div>
         ))}
