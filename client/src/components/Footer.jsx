@@ -24,7 +24,7 @@ const Footer = () => {
         <p className="text-xs md:text-sm !text-gray-400 !mt-2">
           Innovating the Future, Securing the Present
         </p>
-        <p className="text-xs md:text-sm absolute bottom-[-25px] md:bottom-2 left-[50%] -translate-x-1/2 w-full md:w-auto">
+        <p className="text-[12px] md:text-sm absolute bottom-[-25px] md:bottom-4 left-[50%] -translate-x-1/2 w-full md:w-auto">
           © 2025 Hackite Infotech. All Rights Reserved.
         </p>
       </div>

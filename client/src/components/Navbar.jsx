@@ -45,31 +45,32 @@ const Navbar = () => {
           ref={iconRef}
           onClick={() => setOpen(!open)} className="menu-icon" />
         <ul ref={menuRef} className={open ? 'active' : ''}>
-          <Link to="/" className="block h-[50px]" >Home</Link>
+          <Link to="/" className="block " >Home</Link>
 
           {/* ================= services ================= */}
           <li className="dropdown">Services
             <div className="dropdown-content">
               <Link to="/cyber-security">Cyber Security</Link>
-              <Link to="/service2">Service 2</Link>
-              <Link to="/service3">Service 3</Link>
+              <Link to="/web-app">Web Application</Link>
+              <Link to="/mobile-app">Mobile App</Link>
+              <Link to="/digital-marketing">Digital Marketing</Link>
             </div>
           </li>
 
-          <li className="dropdown">Contact Us
-            <div className="dropdown-content">
+          <Link to="/contactus" className="dropdown">Contact Us
+            {/* <div className="dropdown-content">
               <Link to="/service1">Service 1</Link>
               <Link to="/service2">Service 2</Link>
               <Link to="/service3">Service 3</Link>
-            </div>
-          </li>
-          <li className="dropdown">Blog
-            <div className="dropdown-content">
+            </div> */}
+          </Link>
+          <Link to="/blog" className="dropdown">Blog
+            {/* <div className="dropdown-content">
               <Link to="/service1">Service 1</Link>
               <Link to="/service2">Service 2</Link>
               <Link to="/service3">Service 3</Link>
-            </div>
-          </li>
+            </div> */}
+          </Link>
         </ul>
       </div>
     </div>
