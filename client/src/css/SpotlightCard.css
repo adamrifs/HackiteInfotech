@@ -6,6 +6,7 @@
   padding: 2rem;
   margin: 0 auto;
   overflow: hidden;
+  height:250px;
   --mouse-x: 50%;
   --mouse-y: 50%;
   --spotlight-color: rgba(255, 255, 255, 0.05);

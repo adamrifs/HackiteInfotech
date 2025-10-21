@@ -5,16 +5,24 @@ import 'react-loading-skeleton/dist/skeleton.css'
 
 const BlogHero = () => {
   const [selectedBlog, setSelectedBlog] = useState(null);
+  const [topBlogs, setTopBlogs] = useState([]);
   const { blogs, fetchBlogs, blogCount } = useContext(BlogContext)
-  const topBlogs = [...blogs].sort(() => Math.random() - 0.5).slice(0, 3);
 
   useEffect(() => {
     fetchBlogs()
   }, [])
 
+  useEffect(() => {
+    if (blogs.length > 0 && topBlogs.length === 0) {
+      const shuffled = [...blogs].sort(() => Math.random() - 0.5); // shuffle blogs
+      setTopBlogs(shuffled.slice(0, 3)); // take top 3
+    }
+  }, [blogs, topBlogs]);
+
+
   return (
     <div className="md:!p-0 md:!px-20 !p-5 !py-0 overflow-x-hidden !pb-5">
-      <h1 className="md:text-4xl text-2xl md:!pt-17 !pt-14 !pb-6 md:!pb-0">Top Blogs</h1>
+      <h1 className="md:text-4xl text-2xl md:!pt-17 !pt-14 !pb-6 md:!pb-0 !mt-15">Top Blogs</h1>
 
       {topBlogs.length > 0 ? (
         <div className="flex items-start gap-6 !py-4 relative overflow-x-auto md:overflow-x-hidden">

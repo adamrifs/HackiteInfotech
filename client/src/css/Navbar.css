@@ -23,7 +23,7 @@
 }
 
 .logo img {
-  width: 140px;
+  width: 100px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -73,7 +73,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 120%;
+  top: 110%;
   right: 0;
   background: rgba(20, 20, 20, 0.95);
   backdrop-filter: blur(6px);

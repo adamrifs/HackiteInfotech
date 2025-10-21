@@ -60,6 +60,7 @@ const Story = () => {
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Businesses & Enterprises</h2>
+                    <p className="text-[13px] text-center !mt-2">We provide comprehensive solutions tailored specifically for businesses and enterprises of all sizes. Our offerings are designed to help organizations streamline operations, enhance productivity, and drive sustainable growth.</p>
                   </SpotlightCard>
                 </motion.div>
 
@@ -75,6 +76,7 @@ const Story = () => {
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Tech-Savvy Entrepreneurs</h2>
+                    <p className="text-[13px] text-center !mt-2">We empower tech-driven entrepreneurs to turn innovative ideas into successful digital ventures. Whether you’re building a startup, launching an app, or expanding your online presence, our solutions are designed to help you move fast, scale efficiently, and stay ahead of the curve.</p>
                   </SpotlightCard>
                 </motion.div>
 
@@ -90,6 +92,7 @@ const Story = () => {
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Educational & Training Seekers</h2>
+                    <p className="text-[13px] text-center !mt-2">We support students, professionals, and lifelong learners in their journey to gain knowledge, enhance skills, and achieve career success. Our solutions are designed to make education more accessible, engaging, and effective through technology-driven platforms and personalized learning experiences.</p>
                   </SpotlightCard>
                 </motion.div>
 
@@ -105,6 +108,7 @@ const Story = () => {
                     spotlightColor="rgba(0, 229, 255, 0.2)"
                   >
                     <h2>Global Clients</h2>
+                    <p className="text-[13px] text-center !mt-2">We proudly partner with clients across the globe, delivering innovative solutions that transcend borders and industries. Our global approach ensures that every project we undertake aligns with international standards, diverse market needs, and local cultural insights.</p>
                   </SpotlightCard>
                 </motion.div>
               </div>

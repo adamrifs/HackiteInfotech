@@ -62,19 +62,18 @@
 
 .who-we-serve-box {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     margin: 40px 0 50px 0;
     flex-wrap: wrap;
 }
 
 .wws-card {
-    width: 258px;
-
+    width: 350px;
 }
 
 .who-we-serve .wws-card h2 {
-    font-size: 12px;
+    font-size: 18px;
     color: #e1dfe3;
     text-align: center;
 }
