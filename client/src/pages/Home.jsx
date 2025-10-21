@@ -69,7 +69,7 @@ const Home = () => {
             <div>
                 <WhyUs/>
             </div>
-            <div className="flex items-center justify-center !mb-[150px] sm:!mb-38">
+            <div className="flex items-center justify-center !mb-[150px] md:!mb-28">
                 <Services />
             </div>
             <div>

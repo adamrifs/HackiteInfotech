@@ -88,7 +88,7 @@ const Services = () => {
               header={item.header}
               icon={item.icon}
               showKnowMore={true}
-              className="bg-black border border-gray-800 !p-6 rounded-xl !mx-5 hover:cursor-pointer"
+              className="bg-black border border-gray-800 !p-6 rounded-xl !mx-5 hover:cursor-pointer transition-all duration-300 hover:scale-[1.02]"
             />
           </motion.div>
         ))}
