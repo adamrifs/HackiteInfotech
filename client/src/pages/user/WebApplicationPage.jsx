@@ -12,11 +12,15 @@ import {
   RefreshCw,
   Settings,
 } from "lucide-react";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const WebApplicationPage = () => {
   return (
+    <>
+    <Navbar/>
     <main className="min-h-screen bg-black !text-gray-100 !px-6 !py-10 md:!px-12 lg:!px-24">
-      <h1 className="text-xl md:text-4xl lg:text-5xl font-bold leading-snug !pb-3 md:!pb-2 lg:!px-5 tracking-tight">
+      <h1 className="text-xl !mt-12 md:text-4xl lg:text-5xl font-bold leading-snug !pb-3 md:!pb-2 lg:!px-5 tracking-tight">
         Web Application Development
       </h1>
 
@@ -132,6 +136,8 @@ const WebApplicationPage = () => {
         ))}
       </section>
     </main>
+    <Footer/>
+    </>
   );
 };
 

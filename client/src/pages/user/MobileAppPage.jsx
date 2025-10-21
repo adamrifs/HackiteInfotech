@@ -1,11 +1,15 @@
 import React from 'react'
 import Img from "../../assets/mobile-app-img.jpg"
 import { Smartphone, Code, Layout, Server, Cpu, Cloud, Monitor, ShieldCheck, RefreshCw, Settings } from 'lucide-react'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const MobileAppPage = () => {
   return (
+    <>
+    <Navbar/>
     <main className="min-h-screen bg-black !text-gray-100 !px-6 !py-10 md:!px-12 lg:!px-24">
-      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-snug !pb-3 md:!pb-2 lg:!px-5 tracking-tight">
+      <h1 className="text-2xl !mt-12 md:text-4xl lg:text-5xl font-bold leading-snug !pb-3 md:!pb-2 lg:!px-5 tracking-tight">
         Mobile App Development
       </h1>
 
@@ -61,6 +65,8 @@ const MobileAppPage = () => {
         ))}
       </section>
     </main>
+    <Footer/>
+    </>
   )
 }
 
