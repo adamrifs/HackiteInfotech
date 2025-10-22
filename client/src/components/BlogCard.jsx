@@ -36,18 +36,22 @@ const BlogCard = () => {
               />
             </div>
 
-        {/* Content */}
-        <div className="!mt-4 flex flex-col flex-1">
-          <p className="!text-[#ddd] md:text-sm text-xs !mb-2">
-            {item.date}
-          </p>
-          <h2 className="md:text-2xl text-lg font-semibold !mb-3">
-            {item.title}
-          </h2>
-          <p className="md:text-sm text-xs !text-[#ddd] line-clamp-2 !mb-3">
-            {item.description}
-          </p>
-          {/* <button
+            {/* Content */}
+            <div className="!mt-4 flex flex-col flex-1">
+              <p className="!text-[#ddd] md:text-sm text-xs !mb-2">
+                {new Date(item.date).toLocaleDateString("en-IN", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric"
+                })}
+              </p>
+              <h2 className="md:text-2xl text-lg font-semibold line-clamp-2 !mb-3">
+                {item.title}
+              </h2>
+              <p className="md:text-sm text-xs !text-[#ddd] line-clamp-2 !mb-3">
+                {item.description}
+              </p>
+              {/* <button
             onClick={(e) => {
               e.stopPropagation()
               handleOpen(item)
