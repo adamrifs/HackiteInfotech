@@ -13,20 +13,20 @@ const Footer = () => {
       {/* Middle Left: Quick Links */}
       <div className="flex flex-col justify-center items-center md:items-start gap-2 text-gray-300">
         <h3 className="text-lg font-semibold !mb-2">Quick Links</h3>
-        <a href="#" className="text-sm transition-colors duration-300">
+        <a href="#home" className="text-sm transition-colors duration-300">
           Home
         </a>
-        <a href="#" className="text-sm transition-colors duration-300">
+        <a href="#aboutus" className="text-sm transition-colors duration-300">
           About Us
         </a>
-        <a href="#" className="text-sm transition-colors duration-300">
+        <a href="#services" className="text-sm transition-colors duration-300">
           Services
         </a>
-        <a href="#" className="text-sm transition-colors duration-300">
+        {/* <a href="#" className="text-sm transition-colors duration-300">
           Careers
-        </a>
-        <a href="#" className="text-sm transition-colors duration-300">
-          Contact
+        </a> */}
+        <a href="#contactus" className="text-sm transition-colors duration-300">
+          Contact Us
         </a>
       </div>
 
@@ -42,12 +42,12 @@ const Footer = () => {
         <a href="#" className="text-sm transition-colors duration-300">
           FAQs
         </a>
-        <a href="#" className="text-sm transition-colors duration-300">
+        <a href="/blog" className="text-sm transition-colors duration-300">
           Blog
         </a>
-        <a href="#" className="text-sm transition-colors duration-300">
+        {/* <a href="#" className="text-sm transition-colors duration-300">
           Support
-        </a>
+        </a> */}
       </div>
 
       {/* Right side: Address & Tagline */}

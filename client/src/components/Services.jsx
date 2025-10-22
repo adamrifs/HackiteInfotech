@@ -8,6 +8,7 @@ import {
     IconTableColumn,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const items = [
     {
@@ -15,21 +16,25 @@ const items = [
         description:
             "We safeguard businesses from evolving digital threats with comprehensive VAPT, red teaming exercises, and advanced threat analysis—ensuring your systems remain secure and resilient.",
         icon: <IconTableColumn className="h-4 w-4 text-gray-300" />,
+        to: "/cyber-security"
     },
     {
         title: "Digital Marketing",
         description: "We help brands grow and engage their audience through data-driven strategies, SEO, social media marketing, and performance campaigns that deliver measurable results.",
         icon: <IconArrowWaveRightUp className="h-4 w-4 text-gray-300" />,
+        to: "/digital-marketing"
     },
     {
         title: "Web Application development",
         description: "We build scalable, secure, and high-performance web applications tailored to your business needs, delivering seamless user experiences and robust functionality across devices.",
         icon: <IconBoxAlignTopLeft className="h-4 w-4 text-gray-300" />,
+        to: "/web-app"
     },
     {
         title: "Mobile App Development",
         description: "We design and develop intuitive, high-performance mobile apps for iOS and Android that engage users, drive growth, and deliver seamless digital experiences.",
         icon: <IconBoxAlignRightFilled className="h-4 w-4 text-gray-300" />,
+        to: "/mobile-app"
     },
 ];
 
@@ -82,6 +87,7 @@ const Services = () => {
       >
         {items.map((item, i) => (
           <motion.div key={i} variants={itemVariants} className="">
+            <a href={item.to}>
             <BentoGridItem
               title={item.title}
               description={item.description}
@@ -90,6 +96,7 @@ const Services = () => {
               showKnowMore={true}
               className="bg-black border border-gray-800 !p-6 rounded-xl !mx-5 hover:cursor-pointer transition-all duration-300 hover:scale-[1.02]"
             />
+            </a>
           </motion.div>
         ))}
       </motion.div>
