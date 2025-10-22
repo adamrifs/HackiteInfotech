@@ -3,6 +3,7 @@ import Cookies from "js-cookie";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import serverUrl from "urls";
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState('')
@@ -12,7 +13,7 @@ const Login = ({ setToken }) => {
   const handleLogin = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/adminLogin', { email, password }, { withCredentials: true })
+      const response = await axios.post(`${serverUrl}/api/admin/adminLogin`, { email, password }, { withCredentials: true })
       if (response.data.token) {
         Cookies.set('jwt', response.data.token, { expires: 5 })
         setToken(response.data.token)

@@ -8,7 +8,7 @@ const Blog = () => {
     return (
         <div>
             <Navbar/>
-            <BlogHero />
+            {/* <BlogHero /> */}
             <BlogCard />
             <Footer/>
         </div>

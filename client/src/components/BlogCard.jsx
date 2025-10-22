@@ -16,8 +16,8 @@ const BlogCard = () => {
 
   return (
 
-    <div className="!px-5 md:!px-20">
-  <h1 className="md:text-4xl text-2xl !pb-10">Latest Blog</h1>
+    <div className="!px-5 md:!px-20 !mt-32">
+  {/* <h1 className="md:text-4xl text-2xl !pb-10">Latest Blog</h1> */}
 
   {/* Card container */}
   <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 xl:gap-12">
