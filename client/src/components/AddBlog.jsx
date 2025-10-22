@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { BlogContext } from "@/BlogContext";
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
+import serverUrl from "../../urls";
 
 const AddBlog = () => {
   const { blogs, fetchBlogs, blogCount } = useContext(BlogContext)
@@ -46,7 +47,7 @@ const AddBlog = () => {
       formdata.append("description", description);
       setIsLoading(true)
       const response = await axios.post(
-        "http://localhost:5000/api/blog/addBlog",
+        `${serverUrl}/api/blog/addBlog`,
         formdata,
         {
           headers: {
@@ -76,7 +77,7 @@ const AddBlog = () => {
     try {
       setIsLoading(true)
       const response = await axios.delete(
-        `http://localhost:5000/api/blog/deleteBlog/${Id}`,
+        `${serverUrl}/api/blog/deleteBlog/${Id}`,
         { withCredentials: true }
       );
       fetchBlogs();
@@ -103,7 +104,7 @@ const AddBlog = () => {
       formdata.append("description", description);
 
       const response = await axios.put(
-        `http://localhost:5000/api/blog/editBlog/${blogsId}`,
+        `${serverUrl}/api/blog/editBlog/${blogsId}`,
         formdata,
         {
           headers: {
