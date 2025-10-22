@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
-import serverUrl from "urls";
+import serverUrl from '../../../urls';
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState('')
