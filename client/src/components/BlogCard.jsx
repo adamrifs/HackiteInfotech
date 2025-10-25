@@ -82,7 +82,13 @@ const BlogCard = () => {
               alt={selectedCard.title}
               className="w-full h-64 object-cover rounded-lg !mb-4"
             />
-            <p className="!text-sm !text-gray-400 !mb-2">{selectedCard.date}</p>
+            <p className="!text-sm !text-gray-400 !mb-2">
+              {new Date(selectedCard.date).toLocaleDateString("en-IN", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric"
+                })}
+            </p>
             <h2 className="!text-2xl font-bold !mb-4">{selectedCard.title}</h2>
             <p className="!text-base !text-gray-600 dark:!text-gray-300">
               {selectedCard.description}
