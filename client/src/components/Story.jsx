@@ -18,18 +18,18 @@ const Story = () => {
       designation: "Founder & CEO",
       src: liviya,
     },
-    {
-      quote: "Specialist in digital marketing & brand growth                                                                   ",
-      name: "Anoop KJ",
-      designation: "Digital Marketing Head",
-      src: anoop,
-    },
-    {
-      quote: "Expert in technology strategy & product development                                                              ",
-      name: "Sanin",
-      designation: "Company Technical Officer ( CTO )",
-      src: sanin,
-    },
+    // {
+    //   quote: "Specialist in digital marketing & brand growth                                                                   ",
+    //   name: "Anoop KJ",
+    //   designation: "Digital Marketing Head",
+    //   src: anoop,
+    // },
+    // {
+    //   quote: "Expert in technology strategy & product development                                                              ",
+    //   name: "Sanin",
+    //   designation: "Company Technical Officer ( CTO )",
+    //   src: sanin,
+    // },
   ];
 
   return (

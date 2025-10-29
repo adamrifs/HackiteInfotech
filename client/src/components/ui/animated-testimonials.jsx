@@ -136,7 +136,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
               ))}
             </motion.p>
           </motion.div>
-          <div className="flex gap-4 pt-12 md:pt-0 !mt-5 sm:!mt-0">
+          {/* <div className="flex gap-4 pt-12 md:pt-0 !mt-5 sm:!mt-0">
             <button
               onClick={handlePrev}
               className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-700 dark:bg-neutral-800"
@@ -149,7 +149,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
             >
               <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
