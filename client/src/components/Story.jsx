@@ -124,7 +124,7 @@ const Story = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <h1 className="text-4xl md:text-6xl">Our Leader</h1>
+            {/* <h1 className="text-4xl md:text-6xl">Our Leader</h1> */}
           </motion.div>
         </div>
 
